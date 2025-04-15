@@ -5,7 +5,7 @@
 * Kubernetes vs Docker
 * Core components of Kubernetes (Control Plane, Nodes)
 * Kubernetes architecture overview
-* Cluster setup options (Minikube, bare metal, cloud providers)
+* Cluster setup options (Minikube, bare metal and managed kubernetes)
 
 2. Working with Kubernetes CLI (kubectl): Learn how to interact with Kubernetes using kubectl.
 * Installing and configuring kubectl
@@ -91,10 +91,9 @@
 
 15. Kubernetes in Production: Understand how to run and manage Kubernetes in production environments.
 * Multi-tenancy and resource quotas
-* Backup and disaster recovery
+* Backup and disaster recovery (backup etcd)
 * High availability setup
 * Upgrading clusters safely
-* Cost optimization
 
 16. Final Project & Capstone: Apply all learned concepts in a real-world project.
 * Design a microservice architecture
