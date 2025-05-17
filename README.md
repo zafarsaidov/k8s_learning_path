@@ -1,102 +1,94 @@
 # Kubernetes Learning Path
 
-1. Introduction to Kubernetes: Understand what Kubernetes is, its use cases, and its architecture.
-* What is Kubernetes?
-* Kubernetes vs Docker
-* Core components of Kubernetes (Control Plane, Nodes)
-* Kubernetes architecture overview
-* Cluster setup options (Minikube, bare metal and managed kubernetes)
+## Day 1: Intro to Containerization & Kubernetes
+- [Linux namespaces & cgroups](./1/ns_cgroups.md)
+- Docker basics
+- Kubernetes architecture, control plane & node components
 
-2. Working with Kubernetes CLI (kubectl): Learn how to interact with Kubernetes using kubectl.
-* Installing and configuring kubectl
-* Connecting to a cluster
-* Understanding and using kubectl get, describe, logs, and exec
-* Namespaces and context switching
+## Day 2: kubectl & Core Concepts
+- Installing kubectl & accessing clusters
+- Namespaces, contexts, basic kubectl usage
+- Understanding resources and object metadata
 
-3. Pods and Deployments: Understand how to run containers in Kubernetes using Pods and Deployments.
-* What is a Pod?
-* Multi-container Pods
-* ReplicaSets and Deployments
-* Rolling updates and rollbacks
-* YAML manifest structure
+## Day 3: Pods, Deployments & Manifests
+- Pods, ReplicaSets, Deployments
+- Labels, selectors
+- YAML structure and object creation
 
-4. Services and Networking: Learn how services expose applications and how networking works in Kubernetes.
-* ClusterIP, NodePort, LoadBalancer, and ExternalName services
-* DNS in Kubernetes
-* Ingress and Ingress Controllers
-* Network Policies
-* CNI plugins overview (Calico, Flannel)
+## Day 4: Services & Networking (Part 1)
+- ClusterIP, NodePort, LoadBalancer
+- CoreDNS and service discovery
 
-5. Persistent Volumes and Persistent Storage: Handle stateful applications and persistent data in Kubernetes.
-* Volumes, emptyDir, hostPath
-* PersistentVolume (PV) and PersistentVolumeClaim (PVC)
-* StorageClasses and dynamic provisioning
-* StatefulSets overview
+## Day 5: Services & Networking (Part 2)
+- Ingress Controllers and ingress rules
+- Network Policies
+- CNI plugins overview
 
-6. Configuration and Secrets Management: Use ConfigMaps and Secrets for app configuration.
-* Environment variables and volume mounts
-* Creating and mounting ConfigMaps
-* Creating and using Secrets
-* Managing sensitive data securely
+## Day 6: Practice – Build, Push, Deploy
+- Build Docker image for a simple app
+- Push to container registry
+- Deploy app with Deployment + Service + Ingress
 
-7. Health Checks and Probes: Understand how Kubernetes monitors app health.
-* Liveness and Readiness Probes
-* Startup probes
-* Debugging failed probes
+## Day 7: Storage & Stateful Applications
+- Volumes, PVs, PVCs
+- StorageClasses
+- StatefulSets, headless services
+- DaemonSets: intro, use cases (logging agents, monitoring)
 
-8. Kubernetes Scheduling and Affinity: Learn how Kubernetes schedules Pods and how to influence placement.
-* Scheduler basics
-* Node Affinity and Anti-affinity
-* Taints and Tolerations
-* Resource requests and limits
+## Day 8: Configuration & Secrets
+- ConfigMaps and Secrets
+- Environment variables and mounted files
+- Secure and dynamic configuration
 
-9. Scaling and Autoscaling: Scale applications manually and automatically.
-* Horizontal Pod Autoscaler (HPA)
-* Vertical Pod Autoscaler (VPA)
-* Cluster Autoscaler
-* Resource metrics
+## Day 9: Practice – Volumes & Secrets
+- Deploy app with persistent volume
+- Mount secrets/configs
+- Deploy stateful app with PVCs
 
-10. Security in Kubernetes: Implement security best practices in the cluster.
-* RBAC (Role-Based Access Control)
-* Service accounts
-* Network policies
-* SecurityContext and PodSecurity Standards
-* Using tools like kube-bench and kube-hunter
+## Day 10: Health Checks & Basic Scheduling
+- Liveness, Readiness, Startup probes
+- NodeSelector, Affinity, Anti-affinity
 
-11. Logging and Monitoring: Monitor applications and collect logs.
-* Using kubectl logs and log forwarding
-* Centralized logging with Fluentd, Loki, or Elasticsearch
-* Metrics server, Prometheus, and Grafana
-* Kubernetes dashboard
+## Day 11: Advanced Scheduling
+- Taints and Tolerations
+- Resource requests and limits
+- Pod priority and preemption
+- CronJobs: scheduling jobs, retries, concurrency, cleanup
 
-12. CI/CD with Kubernetes: Integrate CI/CD pipelines with Kubernetes deployments.
-* GitOps vs traditional CI/CD
-* Deploying with GitLab CI, Jenkins, or ArgoCD
-* Image building and scanning
-* Canary and Blue/Green deployments
+## Day 12: Security in Kubernetes
+- RBAC: roles, bindings
+- Service accounts
+- PodSecurityContext and security best practices
 
-14. Helm Basics: Learn to use Helm to manage Kubernetes applications.
-* What is Helm?
-* Helm architecture and installation
-* Installing and upgrading charts
-* Working with official charts (Bitnami, etc.)
-* Chart repository management
+## Day 13: Practice – Probes, Scheduling & Security
+- Add probes to deployments
+- Apply resource limits and affinity rules
+- Apply RBAC policies and PodSecurityContext
 
-14. Helm Templating and Chart Development: Create and customize Helm charts.
-* Helm chart structure and templating syntax
-* Values files and parameterization
-* Using functions and conditionals
-* Creating reusable templates and subcharts
-* Helm hooks and lifecycle events
+## Day 14: Helm Basics
+- Installing Helm and adding repos
+- Installing community charts
+- Chart release lifecycle (install, upgrade, rollback)
 
-15. Kubernetes in Production: Understand how to run and manage Kubernetes in production environments.
-* Multi-tenancy and resource quotas
-* Backup and disaster recovery (backup etcd)
-* High availability setup
-* Upgrading clusters safely
+## Day 15: Helm Templating
+- Chart structure and templating logic
+- values.yaml, template helpers
+- conditionals, loops, and hooks
 
-16. Final Project & Capstone: Apply all learned concepts in a real-world project.
-* Design a microservice architecture
-* Build and deploy the app using Helm
-* Configure scaling, monitoring, and logging
-* Present and demo the solution
+## Day 16: Practice – Deploy with Helm
+- Create a custom Helm chart
+- Use templates and values.yaml
+- Release and manage app via Helm
+
+## Day 17: Cluster Setup with Kubespray & Ops
+- Deploy a production-ready cluster with Kubespray
+- Inventory setup and Ansible run
+- Configure kubeconfig access
+- etcd Backup: take a snapshot, restore manually
+- Review system DaemonSets, CronJobs, and addons
+
+## Day 18: Project
+- Deploy multi-component app
+- Use Helm, probes, configs, PVCs, security, scheduling
+
+
