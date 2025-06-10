@@ -2,18 +2,48 @@
 ---
 
 # Namespaces and cgroups
-## Types of Namespaces
-Within the Linux kernel, there are different types of namespaces. Each namespace has its own unique properties:
 
-- A *user namespace* has its own set of user IDs and group IDs for assignment to processes. In particular, this means that a process can have root privilege within its user namespace without having it in other user namespaces.
-- A *process ID (PID) namespace* assigns a set of PIDs to processes that are independent from the set of PIDs in other namespaces. The first process created in a new namespace has PID 1 and child processes are assigned subsequent PIDs. If a child process is created with its own PID namespace, it has PID 1 in that namespace as well as its PID in the parent process’ namespace. See below for an example.
-- A *network namespace* has an independent network stack: its own private routing table, set of IP addresses, socket listing, connection tracking table, firewall, and other network‑related resources.
-- A *mount namespace* has an independent list of mount points seen by the processes in the namespace. This means that you can mount and unmount filesystems in a mount namespace without affecting the host filesystem.
-- An *interprocess communication (IPC) namespace* has its own IPC resources, for example POSIX message queues.
-- A *UNIX Time‑Sharing (UTS) namespace* allows a single system to appear to have different host and domain names to different processes.
+## Creating a Namespace
 
+The manual page indicates that it does exactly what we want:
 
-Example for Network Namespace
+```bash
+unshare – run program in new name namespaces
+```
+
+I’m currently logged in as a regular user, svk, which has its own user ID, group, and so on, but not root privileges:
+
+```bash
+id
+
+output:
+uid=1000(svk) gid=1000(svk) groups=1000(svk) 
+context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c.1023
+```
+
+Now I run the following unshare command to create a new namespace with its own user and PID namespaces. I map the root user to the new namespace (in other words, I have root privilege within the new namespace), mount a new proc filesystem, and fork my process (in this case, bash) in the newly created namespace.
+
+```bash
+unshare –user –pid –map-root-user –mount-proc –fork bash
+```
+
+(For those of you familiar with containers, this accomplishes the same thing as issuing the `<runtime> exec -it </image> /bin/bash command` in a running container.)
+
+The `ps -ef` command shows there are two processes running – `bash` and the `ps` command itself – and the `id` command confirms that I’m root in the new namespace (which is also indicated by the changed command prompt):
+
+```bash
+ps -ef
+UID PID PPID C STIME TTY TIME CMD
+root 1 0 0 14:46 pts/0 00:00:00 bash
+root 15 1 0 14:46 pts/0 00:00:00 ps -ef
+
+id
+uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c.1023
+```
+
+The crucial thing to notice is that I can see only the two processes in my namespace, not any other processes running on the system. I am completely isolated within my own namespace.
+
+## Example for Network Namespace
 
 🧠 Create and Manage Network Namespaces
 ```bash
@@ -182,8 +212,3 @@ sudo ip route get x.x.x.x
 
 
 [Main](../README.md)
-
-tshark -V \
--i eth0 --color \
--d udp.port=8472,vxlan \
--f "port 8472"

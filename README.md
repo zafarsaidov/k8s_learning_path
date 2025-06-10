@@ -2,8 +2,8 @@
 
 ## Day 1: Intro to Containerization & Kubernetes
 - [Linux namespaces & cgroups](./1/ns_cgroups.md)
-- Docker basics
-- Kubernetes architecture, control plane & node components
+- [Docker basics](./1/docker.md)
+- [Kubernetes architecture, control plane & node components](./1/arch.md)
 
 ## Day 2: kubectl & Core Concepts
 - Installing kubectl & accessing clusters
