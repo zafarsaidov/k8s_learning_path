@@ -6,9 +6,9 @@
 - [Kubernetes architecture, control plane & node components](./1/arch.md)
 
 ## Day 2: kubectl & Core Concepts
-- Installing kubectl & accessing clusters
-- Namespaces, contexts, basic kubectl usage
-- Understanding resources and object metadata
+- [Installing kubectl & accessing clusters](./2/kubectl.md)
+- [Namespaces, contexts, basic kubectl usage](https://kubernetes.io/docs/reference/kubectl/quick-reference/#:~:text=kubectl%20%2DA-,Kubectl%20context%20and%20configuration,-Set%20which%20Kubernetes)
+- [Understanding resources and object metadata](https://kubernetes.io/docs/reference/kubectl/quick-reference/#:~:text=special%2Duser%3ANoSchedule-,Resource%20types,-List%20all%20supported)
 
 ## Day 3: Pods, Deployments & Manifests
 - Pods, ReplicaSets, Deployments
