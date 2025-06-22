@@ -27,7 +27,7 @@
 ## Day 6: Practice – Build, Push, Deploy
 - Build Docker image for a simple app
 - Push to container registry
-- Deploy app with Deployment + Service + Ingress
+- [Deploy app with Deployment + Service + Ingress](./6/tasks.md)
 
 ## Day 7: Storage & Stateful Applications
 - Volumes, PVs, PVCs
