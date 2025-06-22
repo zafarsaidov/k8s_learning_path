@@ -16,8 +16,8 @@
 - [YAML structure and object creation](./3/yaml.md)
 
 ## Day 4: Services & Networking (Part 1)
-- ClusterIP, NodePort, LoadBalancer
-- CoreDNS and service discovery
+- [ClusterIP, NodePort, LoadBalancer](./4/service.md)
+- [CoreDNS and service discovery](./4/codedns.md)
 
 ## Day 5: Services & Networking (Part 2)
 - Ingress Controllers and ingress rules

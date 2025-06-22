@@ -128,10 +128,8 @@ kubectl delete -f service.yaml
 
 ### 📘 Bonus Tasks
 * Create a YAML for a Pod with multiple containers.
-* Create a NodePort service instead of ClusterIP.
-* Write a YAML file for a ConfigMap and mount it into a Pod.
 * Add environment variables into a container using YAML.
-* Create a Job using YAML.
+
 
 
 
