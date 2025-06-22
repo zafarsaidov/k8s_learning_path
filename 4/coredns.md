@@ -147,6 +147,8 @@ kubectl -n kube-system apply -f coredns-config.yaml
 kubectl rollout restart deployment coredns -n kube-system
 ```
 * Scale deployment to zero and check resolve services
+* Execute pod and run command `cat /etc/resolv.conf`
+* Check nameserver IP of pod and coreDNS service IP
 
 ## 🧼 Cleanup
 
@@ -165,6 +167,8 @@ kubectl delete pod curlpod
 | CoreDNS config | ConfigMap in kube-system |
 | Debug tool | nslookup, dig, curl in a busybox pod |
 
+
+[Debugging DNS Resolution](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
 
 
 [Main](../README.md)

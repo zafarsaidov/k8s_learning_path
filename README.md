@@ -17,11 +17,11 @@
 
 ## Day 4: Services & Networking (Part 1)
 - [ClusterIP, NodePort, LoadBalancer](./4/service.md)
-- [CoreDNS and service discovery](./4/codedns.md)
+- [CoreDNS and service discovery](./4/coredns.md)
 
 ## Day 5: Services & Networking (Part 2)
-- Ingress Controllers and ingress rules
-- Network Policies
+- [Ingress Controllers and ingress rules](./5/ingress.md)
+- [Network Policies](./5/policy.md)
 - CNI plugins overview
 
 ## Day 6: Practice – Build, Push, Deploy
