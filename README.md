@@ -11,9 +11,9 @@
 - [Understanding resources and object metadata](https://kubernetes.io/docs/reference/kubectl/quick-reference/#:~:text=special%2Duser%3ANoSchedule-,Resource%20types,-List%20all%20supported)
 
 ## Day 3: Pods, Deployments & Manifests
-- Pods, ReplicaSets, Deployments
-- Labels, selectors
-- YAML structure and object creation
+- [Pods](./3/pods.md), [ReplicaSets](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/), [Deployments](./3/deployments.md)
+- [Labels, selectors](./3/labels.md)
+- [YAML structure and object creation](./3/yaml.md)
 
 ## Day 4: Services & Networking (Part 1)
 - ClusterIP, NodePort, LoadBalancer
