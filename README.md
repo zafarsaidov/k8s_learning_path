@@ -30,10 +30,10 @@
 - [Deploy app with Deployment + Service + Ingress](./6/tasks.md)
 
 ## Day 7: Storage & Stateful Applications
-- Volumes, PVs, PVCs
+- [Volumes, PVs, PVCs](./7/volume.md)
 - StorageClasses
-- StatefulSets, headless services
-- DaemonSets: intro, use cases (logging agents, monitoring)
+- [StatefulSets, headless services](./7/statefulset.md)
+- [DaemonSets: intro, use cases (logging agents, monitoring)](./7/daemonset.md)
 
 ## Day 8: Configuration & Secrets
 - ConfigMaps and Secrets
