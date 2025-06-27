@@ -36,9 +36,8 @@
 - [DaemonSets: intro, use cases (logging agents, monitoring)](./7/daemonset.md)
 
 ## Day 8: Configuration & Secrets
-- ConfigMaps and Secrets
 - Environment variables and mounted files
-- Secure and dynamic configuration
+- [ConfigMaps and Secrets](./8/secrets.md)
 
 ## Day 9: Practice – Volumes & Secrets
 - Deploy app with persistent volume
