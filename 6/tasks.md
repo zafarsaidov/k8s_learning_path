@@ -1,4 +1,4 @@
-🧪 Practice Project: Flask + PostgreSQL App in Kubernetes
+# 🧪 Practice Project: Flask + PostgreSQL App in Kubernetes
 
 🧠 Learning Objectives
 * Build and push Docker image of a Flask app

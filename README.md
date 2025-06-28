@@ -42,7 +42,7 @@
 ## Day 9: Practice – Volumes & Secrets
 - Deploy app with persistent volume
 - Mount secrets/configs
-- Deploy stateful app with PVCs
+- [Deploy stateful app with PVCs](./9/tasks.md)
 
 ## Day 10: Health Checks & Basic Scheduling
 - Liveness, Readiness, Startup probes
