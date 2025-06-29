@@ -45,8 +45,8 @@
 - [Deploy stateful app with PVCs](./9/tasks.md)
 
 ## Day 10: Health Checks & Basic Scheduling
-- Liveness, Readiness, Startup probes
-- NodeSelector, Affinity, Anti-affinity
+- [Liveness, Readiness, Startup probes](./10/probes.md)
+- [NodeSelector, Affinity, Anti-affinity](./10/scheduler.md)
 
 ## Day 11: Advanced Scheduling
 - Taints and Tolerations
