@@ -18,13 +18,12 @@ id
 
 output:
 uid=1000(svk) gid=1000(svk) groups=1000(svk) 
-context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c.1023
 ```
 
 Now I run the following unshare command to create a new namespace with its own user and PID namespaces. I map the root user to the new namespace (in other words, I have root privilege within the new namespace), mount a new proc filesystem, and fork my process (in this case, bash) in the newly created namespace.
 
 ```bash
-unshare –user –pid –map-root-user –mount-proc –fork bash
+unshare --user --pid --map-root-user --mount-proc --fork bash
 ```
 
 (For those of you familiar with containers, this accomplishes the same thing as issuing the `<runtime> exec -it </image> /bin/bash command` in a running container.)
@@ -38,7 +37,7 @@ root 1 0 0 14:46 pts/0 00:00:00 bash
 root 15 1 0 14:46 pts/0 00:00:00 ps -ef
 
 id
-uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c.1023
+uid=0(root) gid=0(root) groups=0(root) 
 ```
 
 The crucial thing to notice is that I can see only the two processes in my namespace, not any other processes running on the system. I am completely isolated within my own namespace.

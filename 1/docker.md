@@ -24,9 +24,9 @@ docker run hello-world
 ```
 
 ### What it does:
-	•	Downloads the hello-world image if it doesn’t exist locally.
-	•	Starts a container that prints a hello message.
-	•	Stops and removes the container automatically after the message.
+* Downloads the hello-world image if it doesn’t exist locally.
+* Starts a container that prints a hello message.
+* Stops and removes the container automatically after the message.
 
 
 ## Run an interactive Ubuntu container:
@@ -51,8 +51,8 @@ docker ps -a
 ```
 
 ## Image vs Container
-	•	Image = Blueprint
-	•	Container = Running instance of the image
+* Image = Blueprint
+* Container = Running instance of the image
 
 ## Inspect images:
 
