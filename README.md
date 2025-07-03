@@ -49,10 +49,10 @@
 - [NodeSelector, Affinity, Anti-affinity](./10/scheduler.md)
 
 ## Day 11: Advanced Scheduling
-- Taints and Tolerations
-- Resource requests and limits
-- Pod priority and preemption
-- CronJobs: scheduling jobs, retries, concurrency, cleanup
+- [Taints and Tolerations](/11/taint.md)
+- [Resource requests and limits](./11/limits.md)
+- [Pod priority and preemption](/11/priority.md)
+- [CronJobs: scheduling jobs, retries, concurrency, cleanup](/11/crons.md)
 
 ## Day 12: Security in Kubernetes
 - RBAC: roles, bindings
