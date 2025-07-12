@@ -62,7 +62,7 @@
 ## Day 13: Practice – Probes, Scheduling & Security
 - Add probes to deployments
 - Apply resource limits and affinity rules
-- Apply RBAC policies and PodSecurityContext
+- [Apply RBAC policies and PodSecurityContext](./13/practice.md)
 
 ## Day 14: Helm Basics
 - Installing Helm and adding repos
