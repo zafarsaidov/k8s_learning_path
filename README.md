@@ -65,9 +65,9 @@
 - [Apply RBAC policies and PodSecurityContext](./13/practice.md)
 
 ## Day 14: Helm Basics
-- Installing Helm and adding repos
-- Installing community charts
-- Chart release lifecycle (install, upgrade, rollback)
+- [Installing Helm and adding repos](./14/install.md)
+- [Installing community charts](./14/community.md)
+- [Chart release lifecycle (install, upgrade, rollback)](./14/life.md)
 
 ## Day 15: Helm Templating
 - Chart structure and templating logic
