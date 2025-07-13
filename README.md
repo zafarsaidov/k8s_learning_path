@@ -77,7 +77,7 @@
 ## Day 16: Practice – Deploy with Helm
 - Create a custom Helm chart
 - Use templates and values.yaml
-- Release and manage app via Helm
+- [Release and manage app via Helm](./16/practice.md)
 
 ## Day 17: Cluster Setup with Kubespray & Ops
 - Deploy a production-ready cluster with Kubespray
