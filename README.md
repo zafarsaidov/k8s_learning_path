@@ -83,8 +83,8 @@
 - Deploy a production-ready cluster with Kubespray
 - Inventory setup and Ansible run
 - Configure kubeconfig access
-- etcd Backup: take a snapshot, restore manually
-- Review system DaemonSets, CronJobs, and addons
+- [etcd Backup: take a snapshot, restore manually](./17/etct-systemd.md)
+- [Review system DaemonSets, CronJobs, and addons](./17/ingress.md)
 
 ## Day 18: Project
 - Deploy multi-component app
