@@ -55,9 +55,9 @@
 - [CronJobs: scheduling jobs, retries, concurrency, cleanup](/11/crons.md)
 
 ## Day 12: Security in Kubernetes
-- RBAC: roles, bindings
-- Service accounts
-- PodSecurityContext and security best practices
+- [RBAC: roles, bindings](./12/rbac.md)
+- [Service accounts](./12/sa.md)
+- [PodSecurityContext and security best practices](./12/pod_security.md)
 
 ## Day 13: Practice – Probes, Scheduling & Security
 - Add probes to deployments
