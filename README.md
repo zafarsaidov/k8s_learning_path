@@ -87,7 +87,7 @@
 - [Review system DaemonSets, CronJobs, and addons](./17/ingress.md)
 
 ## Day 18: Project
-- Deploy multi-component app
-- Use Helm, probes, configs, PVCs, security, scheduling
+- [Deploy multi-component app](./18/tasks.md)
+- Use Helm, probes, configs, PVCs, security, scheduling: [1](./18/solutions1.md) [2](./18/solutions2.md)
 
 
