@@ -70,9 +70,9 @@
 - [Chart release lifecycle (install, upgrade, rollback)](./14/life.md)
 
 ## Day 15: Helm Templating
-- Chart structure and templating logic
-- values.yaml, template helpers
-- conditionals, loops, and hooks
+- [Chart structure and templating logic](./15/structure.md)
+- [values.yaml, template helpers](./15/values.md)
+- [conditionals, loops, and hooks](./15/hooks.md)
 
 ## Day 16: Practice – Deploy with Helm
 - Create a custom Helm chart
