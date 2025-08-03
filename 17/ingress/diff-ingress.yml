@@ -1,0 +1,52 @@
+# ingress-nginx--4.11.2.yaml
+controller:
+  # ...
+  hostNetwork: true
+
+  # ...
+  hostPort:
+  # ...
+    enabled: true
+  # ...
+    ports:
+      http: 80
+      https: 443
+
+  # ...
+  ingressClassResource:
+    enabled: true
+    default: true
+
+  # ...
+  kind: DaemonSet
+
+  # ...
+  tolerations:
+    - key: "node-role.kubernetes.io/control-plane"
+      operator: "Equal"
+      value: ""
+      effect: "NoSchedule"
+
+  # ...
+  nodeSelector:
+    kubernetes.io/os: linux
+    group: control-plane
+
+  # ...
+  service:
+    # ...
+    enabled: true
+    # ...
+    external:
+      enabled: true
+    # ...
+    type: ClusterIP
+
+  # ...
+  nodePorts:
+    http: "80"
+    https: "443"
+
+  # ...
+  metrics:
+    enabled: true
